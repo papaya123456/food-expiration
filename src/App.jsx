@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { FaTrashAlt } from 'react-icons/fa';
 import "./styles.css";
 
 export default function App() {
@@ -106,9 +107,11 @@ export default function App() {
               {todo.title}
               <span>Expires on: {new Date(todo.expiryDate).toLocaleDateString()}</span>
             </label>
-            <button onClick={() => deleteTodo(todo.id)} className="btn btn-danger">
-              Delete
-            </button>
+            <FaTrashAlt 
+              onClick={() => deleteTodo(todo.id)} 
+              className="delete-icon" 
+              title="Delete"
+            />
           </li>
         ))}
       </ul>
