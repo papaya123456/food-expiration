@@ -104,7 +104,7 @@ export default function App() {
                 checked={todo.completed}
                 onChange={e => toggleTodo(todo.id, e.target.checked)}
               />
-              {todo.title}
+              <span>{todo.title}</span>
               <span>Expires on: {new Date(todo.expiryDate).toLocaleDateString()}</span>
             </label>
             <FaTrashAlt 
