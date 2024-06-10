@@ -68,7 +68,7 @@ export default function App() {
   }
 
   return (
-    <div>
+    <div className="container">
       <form onSubmit={handleSubmit} className="new-item-form">
         <div className="form-row">
           <label htmlFor="item">New Food Item</label>
